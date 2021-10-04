@@ -4,14 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form id="search-form">
-      <input type="text" id="input" name="input" placeholder="Seach..." />
-      <button>🔍</button>
-    </form>
+    <!--Search Bar container-->
+    <div id="nav-bar">
+      <form id="search-form">
+        <input type="text" id="input" name="input" placeholder="Seach..." />
+        <button>🔍</button>
+      </form>
+    </div>
+    <div id="book-container">
+      <div id="book-card">
+        <img class="book-image" src="images/book-cover-placeholder.jpg" />
+        <h1 class="book-title">Placeholder Title</h1>
+        <h2 class="book-author">by Jim Jameson</h2>
+        <p class="book-description">
+          Lorem ipsum dolor sit amet, consectetur <br />
+          adipiscing elit, sed do eiusmod tempor <br />
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
     <script src="secrets.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
+
+<!-- EXAMPLE SKELETON FROM LECTURE -->
+<!-- 
+</div>
+<div id="poke-container"></div>
+<hr>
+<br>
+<div id="comments-form-container">
+  <h1>Add Comment</h1>
+  <br>
+  <form id="comments-form">
+    <input type="text" id="user" placeholder="User's Name"/>
+    <input type="text" id="content" placeholder="User's Comment" />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+<div id="comments-container"></div>
+</body>
+</html> -->

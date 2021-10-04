@@ -1,0 +1,32 @@
+#book-card {
+  border: solid;
+  border-color: black;
+  padding: 5px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding-bottom: 0px;
+}
+#book-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-title {
+  font-size: 20px;
+}
+.book-author {
+  font-size: 15px;
+}
+.book-description {
+  font-size: 15px;
+}
+.book-image {
+  width: auto;
+  height: 180px;
+}
