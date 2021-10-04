@@ -1,1 +1,1 @@
-console.log(APIKey);
+console.log(apiKey);
