@@ -36,5 +36,5 @@ function getBooks() {
       });
     });
 }
-
+console.log('testing');
 document.addEventListener('DOMContentLoaded', start());
