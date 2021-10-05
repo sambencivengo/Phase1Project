@@ -59,4 +59,5 @@ function getBooks() {
     });
 }
 // console.log('testing');
+console.log('Hello, this is Sam.');
 document.addEventListener('DOMContentLoaded', start());
