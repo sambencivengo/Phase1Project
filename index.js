@@ -30,7 +30,7 @@ function start() {
 const bookContainer = document.getElementById('book-container');
 
 function getBooks() {
-  fetch(printEBookFiction)
+  fetch(printEBookNonFiction)
     .then((resp) => resp.json())
     .then((data) => {
       data.results.books.forEach((books) => {
