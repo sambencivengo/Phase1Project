@@ -7,7 +7,7 @@ const getLists = () => {
     .then((resp) => resp.json())
     .then((data) =>
       data.results.forEach((books) => {
-        console.log(books);
+      //  console.log(books);
       })
     );
 };
@@ -27,13 +27,8 @@ function start() {
   getBooks();
   getLists();
 }
-const bookContainer = document.getElementById('book-container');
 
-function getBooks() {
-  fetch(printEBookNonFiction)
-    .then((resp) => resp.json())
-    .then((data) => {
-      data.results.books.forEach((books) => {
+function renderBook(books){
         const image = document.createElement('img');
         image.className = 'book-image';
         const h1 = document.createElement('h1');
@@ -44,20 +39,34 @@ function getBooks() {
         descriptionContainer.className = 'description-container';
         const p = document.createElement('p');
         p.className = 'book-description';
-        const div = document.createElement('book-card');
+        const div = document.createElement('div');
         div.className = 'book-card';
+        const bookInfo=document.createElement('div')
+        bookInfo.className='book-info'
         image.src = books.book_image;
 
         h1.textContent = books.title;
         h2.textContent = books.author;
         p.textContent = books.description;
+        bookInfo.append(h1,h2)
+        //console.log(bookInfo)
         descriptionContainer.append(p);
-        div.append(image, h1, h2, descriptionContainer);
-        console.log(div);
+
+        div.append( image,bookInfo, descriptionContainer);
         bookContainer.appendChild(div);
-      });
+}
+
+
+
+
+const bookContainer = document.getElementById('book-container');
+console.log()
+function getBooks() {
+  fetch(printEBookNonFiction)
+    .then((resp) => resp.json())
+    .then((data) => {
+      data.results.books.forEach(renderBook);
     });
 }
-// console.log('testing');
-console.log('Hello, this is Sam.');
+// console.log('testing')
 document.addEventListener('DOMContentLoaded', start());
