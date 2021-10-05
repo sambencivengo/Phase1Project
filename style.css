@@ -1,4 +1,8 @@
-#book-card {
+body {
+  background-color: beige;
+}
+.book-card {
+  background-color: white;
   border: solid;
   border-color: black;
   padding: 5px;
@@ -15,18 +19,29 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .book-title {
-  font-size: 20px;
+  font-size: 16px;
+  padding: 10px;
 }
 .book-author {
   font-size: 15px;
 }
+.description-container {
+  /* background-color: rgba(40, 109, 33, 0.356); */
+  max-width: 250px;
+  margin: auto;
+}
 .book-description {
   font-size: 15px;
+  padding: 5px;
+  text-align: left;
 }
 .book-image {
+  padding-top: 10px;
   width: auto;
   height: 180px;
 }
