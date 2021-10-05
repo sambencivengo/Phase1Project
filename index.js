@@ -68,5 +68,5 @@ function getBooks() {
       data.results.books.forEach(renderBook);
     });
 }
-// console.log('testing')
+ console.log('testing')
 document.addEventListener('DOMContentLoaded', start());
