@@ -104,13 +104,13 @@ function removeAllChildNodes(parent) {
     parent.removeChild(parent.firstChild);
   }
 }
-fetch('https://api.nytimes.com/svc/books/v3/lists/names' + key)
-  .then((resp) => resp.json())
-  .then((data) => console.log(data));
+// fetch('https://api.nytimes.com/svc/books/v3/lists/names' + key)
+//   .then((resp) => resp.json())
+//   .then((data) => console.log(data));
 
 select.addEventListener('change', () => {
   removeAllChildNodes(bookContainer);
-  console.log(select.value);
+  // console.log(select.value);
   getBooks(select.value);
 });
 document.addEventListener('DOMContentLoaded', start());
