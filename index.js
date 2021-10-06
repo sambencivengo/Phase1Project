@@ -39,88 +39,129 @@ function renderBook(books) {
   descriptionContainer.append(p);
   div.append(image, bookInfo, descriptionContainer);
   bookContainer.appendChild(div);
-  
-  
 
-
-  //create comment container 
-  const form=document.createElement('form')
-  const inputText=document.createElement('input')
-  const inputButton=document.createElement('input')
-  const commentbox=document.createElement('div')
-  const divComment=document.getElementById('comment-container')
-  
+  //create comment container
+  const form = document.createElement('form');
+  const inputText = document.createElement('input');
+  const inputButton = document.createElement('input');
+  const commentbox = document.createElement('div');
+  const divComment = document.getElementById('comment-container');
 
   //create like button for every container
-  const likeContainer=document.createElement('div')
-  const likeButton=document.createElement('button')
-  const likeNum=document.createElement('p')
-  likeContainer.className='like-container'
-  likeNum.innerText='0'
-  likeNum.setAttribute("id", "likeNum")
-  likeButton.innerText='🖤'
-  likeButton.setAttribute("id", "likeButton")
-  likeContainer.setAttribute("id", "likeContainer")
-  likeContainer.append(likeNum,likeButton)
-  console.log(likeContainer)
-  commentbox.append(likeContainer)
+  const likeContainer = document.createElement('div');
+  const likeButton = document.createElement('button');
+  const likeNum = document.createElement('p');
+  likeContainer.className = 'like-container';
+  likeNum.innerText = '0';
+  likeNum.setAttribute('id', 'likeNum');
+  likeButton.innerText = '🖤';
+  likeButton.setAttribute('id', 'likeButton');
+  likeContainer.setAttribute('id', 'likeContainer');
+  likeContainer.append(likeNum, likeButton);
+  console.log(likeContainer);
+  commentbox.append(likeContainer);
 
-  likeButton.addEventListener('click',function(){
-   const like=parseInt(likeNum.innerText)
-  const newLike=like+1
-  likeNum.innerText=newLike
-  })
+  likeButton.addEventListener('click', function () {
+    const like = parseInt(likeNum.innerText);
+    const newLike = like + 1;
+    likeNum.innerText = newLike;
+  });
 
-
-  
   // set attribute for comment container
-  form.className='form-comment'
-  commentbox.className='comment-box'
-  inputText.type="text"
-  inputText.setAttribute("id", "comment1");
-  inputButton.type="submit"
-  inputButton.value="Comment"
-  form.append(inputText,inputButton)
-  commentbox.append(form)
-  bookContainer.append(commentbox)
-  
-  
-
-   
-
+  form.className = 'form-comment';
+  commentbox.className = 'comment-box';
+  inputText.type = 'text';
+  inputText.setAttribute('id', 'comment1');
+  inputButton.type = 'submit';
+  inputButton.value = 'Comment';
+  form.append(inputText, inputButton);
+  commentbox.append(form);
+  bookContainer.append(commentbox);
 
   //form for comments in every book
-  form.addEventListener('submit',function(e){
-    e.preventDefault()
-    const comment=e.target.comment1.value
-    const p=document.createElement('p')
-    p.className='commentP'
-    p.innerText=comment
-    form.append(p)
-  })
-
- 
-
-
-  
-  
-
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const comment = e.target.comment1.value;
+    const p = document.createElement('p');
+    p.className = 'commentP';
+    p.innerText = comment;
+    form.append(p);
+  });
 }
 
-
-
-const commentContainer=document.getElementById('comment-container')
+const commentContainer = document.getElementById('comment-container');
 const bookContainer = document.getElementById('book-container');
 console.log();
 function getBooks() {
   fetch(baseURL + fiction + key)
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       data.results.books.forEach(renderBook);
-})
+    });
 }
 console.log('testing');
+//===============================================================
+//DROP DOWN MENU
+//===============================================================
+
+const createEl = (tag) => document.createElement(tag);
+const navBar = document.getElementById('nav-bar');
+const dropDownForm = createEl('form');
+const label = createEl('label');
+const select = createEl('select');
+select.id = 'drop-down';
+// FICTION
+const selectFiction = createEl('option');
+selectFiction.value = 'combined-print-and-e-book-fiction';
+selectFiction.textContent = 'Fiction';
+// NON-FICTION
+const selectNonFiction = createEl('option');
+selectNonFiction.value = 'combined-print-and-e-book-nonfiction';
+selectNonFiction.textContent = 'Non-Fiction';
+// ADVICE
+const selectAdvice = createEl('option');
+selectAdvice.value = 'advice-how-to-and-miscellaneous';
+selectAdvice.textContent = 'Advice';
+// SCIENCE
+const selectScience = createEl('option');
+selectAdvice.value = 'science';
+selectScience.textContent = 'Science';
+// SPORTS
+const selectSports = createEl('option');
+selectSports.value = 'sports';
+selectSports.textContent = 'Sports';
+// PAPERBACK GRAPHIC BOOKS
+const selectGraphic = createEl('option');
+selectGraphic.value = 'paperback-graphic-books';
+selectGraphic.textContent = 'Graphic Books';
+label.textContent = 'Choose a genre:  ';
+
+navBar.append(label);
+label.append(select);
+select.append(
+  selectFiction,
+  selectNonFiction,
+  selectAdvice,
+  selectScience,
+  selectSports,
+  selectGraphic
+);
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+// fetch('https://api.nytimes.com/svc/books/v3/lists/names' + key)
+//   .then((resp) => resp.json())
+//   .then((data) => console.log(data));
+
+select.addEventListener('change', () => {
+  removeAllChildNodes(bookContainer);
+  // console.log(select.value);
+  getBooks(select.value);
+});
 
 // const menuSelect = document.getElementById('genre-form');
 
