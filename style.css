@@ -15,7 +15,7 @@ body {
   height: auto;
   padding-bottom: 0px;
   position: relative;
-  
+  overflow: hidden;
 }
 #book-container {
   display: flex;
@@ -33,7 +33,6 @@ body {
   font-size: 15px;
 }
 
-
 .book-description {
   font-size: 15px;
   padding: 5px;
@@ -45,8 +44,7 @@ body {
   height: 180px;
 }
 
-
-.description-container{
+.description-container {
   background-color: #fff;
   padding: 2rem;
   position: absolute;
@@ -58,9 +56,10 @@ body {
   overflow-y: auto;
   transition: transform 0.3s ease-in;
   visibility: hidden;
-} 
+}
 
-.book-card:hover .description-container{
+.book-card:hover .description-container {
   transform: translateY(0);
+
   visibility: visible;
-} 
+}
