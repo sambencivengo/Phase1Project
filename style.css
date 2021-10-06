@@ -51,13 +51,20 @@ body {
 
   flex-wrap: wrap;
 }
+
+.commentP{
+  text-align: left;
+  margin-left: 5px;
+}
+
+
 #likeNum{
   display:inline-block;
   
 }
 #likeButton{
   display:inline-block;
-  margin-left: 200px;
+  margin-left: 170px;
 }
 
 

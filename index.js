@@ -94,6 +94,7 @@ function renderBook(books) {
     e.preventDefault()
     const comment=e.target.comment1.value
     const p=document.createElement('p')
+    p.className='commentP'
     p.innerText=comment
     form.append(p)
   })
@@ -115,6 +116,7 @@ function getBooks() {
   fetch(baseURL + fiction + key)
     .then((resp) => resp.json())
     .then((data) => {
+      console.log(data)
       data.results.books.forEach(renderBook);
 })
 }
