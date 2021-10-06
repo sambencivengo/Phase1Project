@@ -77,7 +77,6 @@ function renderBook(books) {
   form.append(inputText, inputButton);
   commentbox.append(form);
   bookContainer.append(commentbox);
-
   //form for comments in every book
   form.addEventListener('submit', function (e) {
     e.preventDefault();
