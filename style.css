@@ -1,5 +1,8 @@
 body {
   background-color: beige;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .book-card {
   background-color: white;
@@ -8,11 +11,10 @@ body {
   padding: 5px;
   margin-top: 30px;
   margin-left: 10px;
-  margin-right: 10px;
   float: left;
   text-align: center;
-  width: auto;
-  height: auto;
+  width: 250px;
+  height: 300px;
   padding-bottom: 0px;
   position: relative;
   overflow: hidden;
@@ -24,17 +26,35 @@ body {
   border-color: black;
   padding: 5px;
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: -15px
   margin-right: 10px;
   float: left;
-  text-align: center;
-  width: auto;
-  height: auto;
+  /* text-align: center; */
+  width: 200px;
+  height: 300px;
   padding-bottom: 0px;
   position: relative;
 
   position: relative;
   overflow: hidden;
+}
+
+.form-comment{
+  position: absolute;
+ bottom: 0;
+ right: 0px;
+ left: -6px;
+
+}
+#comment1{
+  width: auto;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.book-comment{
+  display: inline-flex;
+  margin:30px;
 }
 
 
@@ -47,6 +67,10 @@ body {
 
 
   flex-wrap: wrap;
+}
+
+.form-comment{
+  bottom: 0;
 }
 
 .commentP{
