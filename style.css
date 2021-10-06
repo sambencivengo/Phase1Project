@@ -1,5 +1,39 @@
+#nav-bar {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  background-color: rgba(172, 154, 104, 0.76);
+  padding: 15px;
+  border-radius: 5px 20px 5px 20px;
+  box-shadow: 2px 2px 2px 1px rgb(0, 0, 0);
+}
+label {
+  /*   background-color: red; */
+  color: white;
+  width: auto;
+
+  float: right;
+  text-align: center;
+  font-size: 25px;
+  font-family: helvetica;
+  font-style: italic;
+  position: relative;
+  border: transparent;
+}
+#drop-down {
+  background-color: #f2e5d9;
+  color: black;
+  width: auto;
+  float: center;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  font-family: helvetica;
+  font-style: italic;
+  position: relative;
+  border: transparent;
+}
 body {
-  background-color: rgb(255, 255, 246);
+  background-color: #f2e5d9;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,7 +85,7 @@ body {
 .book-comment {
   display: inline-flex;
   margin: 30px;
-  background-color: rgba(155, 133, 75, 0.76);
+  background-color: rgba(172, 154, 104, 0.76);
   padding-top: 15px;
   padding-left: 30px;
   padding-right: 15px;
@@ -90,11 +124,13 @@ p.commentP {
   line-height: 10px;
 }
 .book-title {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 15px;
+  font-family: arial;
+  /*   padding: 10px; */
 }
 .book-author {
-  font-size: 15px;
+  font-size: 12px;
+  font-family: arial;
 }
 
 .book-description {
@@ -103,7 +139,7 @@ p.commentP {
   text-align: left;
 }
 .book-image {
-  padding-top: 10px;
+  padding-top: 25px;
   width: 140px;
   height: 180px;
 }
