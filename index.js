@@ -59,7 +59,7 @@ function renderBook(books) {
   likeButton.setAttribute("id", "likeButton")
   likeContainer.setAttribute("id", "likeContainer")
   likeContainer.append(likeNum,likeButton)
-  console.log(likeContainer)
+  //console.log(likeContainer)
   commentbox.append(likeContainer)
 
   likeButton.addEventListener('click',function(){
@@ -76,7 +76,7 @@ function renderBook(books) {
   inputText.type="text"
   inputText.setAttribute("id", "comment1");
   inputButton.type="submit"
-  inputButton.value="Comment"
+  inputButton.value="💬"
   inputButton.setAttribute("id", "button1");
   form.append(inputText,inputButton)
   commentbox.append(form)

@@ -40,16 +40,24 @@ body {
 }
 
 .form-comment{
-  position: absolute;
+ position: absolute;
  bottom: 0;
  right: 0px;
  left: -6px;
-
+ 
 }
+
+#button1{
+  height:28px;
+}
+
 #comment1{
   width: auto;
-  margin-left: 25px;
+  margin-left: 10px;
   margin-bottom: 10px;
+  height:22px;
+  width: 160px;
+
 }
 
 .book-comment{
@@ -72,12 +80,10 @@ body {
 .form-comment{
   bottom: 0;
 }
-
 .commentP{
   text-align: left;
   margin-left: 5px;
 }
-
 
 #likeNum{
   display:inline-block;
@@ -85,7 +91,12 @@ body {
 }
 #likeButton{
   display:inline-block;
-  margin-left: 170px;
+  margin-left: 150px;
+  
+}
+p.commentP{
+  font-family: 'Times New Roman', Times, serif;
+  line-height:10px
 }
 
 
@@ -93,9 +104,12 @@ body {
 .book-title {
   font-size: 16px;
   padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+
 }
 .book-author {
   font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .book-description {
