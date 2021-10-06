@@ -1,62 +1,62 @@
 body {
-  background-color: beige;
+  background-color: rgb(255, 255, 246);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .book-card {
   background-color: white;
-  border: solid;
-  border-color: black;
   padding: 5px;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin-top: 15px;
   float: left;
   text-align: center;
   width: 250px;
   height: 300px;
   padding-bottom: 0px;
+  border-radius: 0px 0px 0px 20px;
+
   position: relative;
   overflow: hidden;
 }
 
-.comment-box{
+.comment-box {
   background-color: white;
-  border: solid;
-  border-color: black;
   padding: 5px;
-  margin-top: 30px;
-  margin-left: -15px
-  margin-right: 10px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
   float: left;
   /* text-align: center; */
-  width: 200px;
+  width: 250px;
   height: 300px;
   padding-bottom: 0px;
   position: relative;
-
+  border-radius: 0px 20px 0px 0px;
   position: relative;
   overflow: hidden;
 }
 
-.form-comment{
+.form-comment {
   position: absolute;
- bottom: 0;
- right: 0px;
- left: -6px;
-
+  bottom: 0;
+  right: 0px;
+  left: -6px;
 }
-#comment1{
-  width: auto;
-  margin-left: 25px;
+#comment1 {
+  width: 150px;
+  margin-left: 20px;
   margin-bottom: 10px;
 }
 
-.book-comment{
+.book-comment {
   display: inline-flex;
-  margin:30px;
+  margin: 30px;
+  background-color: rgba(155, 133, 75, 0.76);
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 15px;
+  border-radius: 15px 50px;
 }
-
 
 #book-container {
   display: flex;
@@ -65,31 +65,30 @@ body {
   margin-left: 50px;
   margin-right: 50px;
 
-
   flex-wrap: wrap;
 }
 
-.form-comment{
+/* Aristella's Form Changes */
+.form-comment {
   bottom: 0;
 }
 
-.commentP{
+.commentP {
   text-align: left;
   margin-left: 5px;
 }
 
-
-#likeNum{
-  display:inline-block;
-  
+#likeNum {
+  display: inline-block;
 }
-#likeButton{
-  display:inline-block;
-  margin-left: 170px;
+#likeButton {
+  display: inline-block;
+  margin-left: 150px;
 }
-
-
-
+p.commentP {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 10px;
+}
 .book-title {
   font-size: 16px;
   padding: 10px;
@@ -105,7 +104,7 @@ body {
 }
 .book-image {
   padding-top: 10px;
-  width: auto;
+  width: 140px;
   height: 180px;
 }
 
