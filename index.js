@@ -48,7 +48,7 @@ function renderBook(books) {
   //create like button for every container
   const likeContainer = document.createElement('div');
   const likeButton = document.createElement('button');
-  const likeNum = document.createElement('p');
+  const likeNum = document.createElement('button');
   likeContainer.className = 'like-container';
   likeNum.innerText = '0';
   likeNum.setAttribute('id', 'likeNum');
@@ -56,7 +56,7 @@ function renderBook(books) {
   likeButton.setAttribute('id', 'likeButton');
   likeContainer.setAttribute('id', 'likeContainer');
   likeContainer.append(likeNum, likeButton);
-  console.log(likeContainer);
+ // console.log(likeContainer);
   commentbox.append(likeContainer);
 
   likeButton.addEventListener('click', function () {
@@ -71,21 +71,26 @@ function renderBook(books) {
   inputText.type = 'text';
   inputText.setAttribute('id', 'comment1');
   inputButton.type = 'submit';
-  inputButton.value = 'Comment';
+  inputButton.value = '💬';
   inputButton.setAttribute('id', 'button1');
   form.append(inputText, inputButton);
   commentbox.append(form);
   //bookContainer.append(commentbox)
 
   //form for comments in every book
+  const commentP=document.createElement('div')
+  commentP.className="commet-box1"
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const comment = e.target.comment1.value;
     const p = document.createElement('p');
     p.className = 'commentP';
     p.innerText = comment;
-    likeContainer.append(p);
+    commentP.append(p)
+    console.log(commentP)
   });
+  
+  likeContainer.append(commentP); 
 
   const divBookComment = document.createElement('div');
   divBookComment.className = 'book-comment';
@@ -101,7 +106,7 @@ function getBooks(genre) {
   fetch(baseURL + genre + key)
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       data.results.books.forEach(renderBook);
     });
 }
