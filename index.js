@@ -36,10 +36,9 @@ function renderBook(books) {
   bookInfo.append(h1, h2);
   descriptionContainer.append(p);
   div.append(image, bookInfo, descriptionContainer);
-  bookContainer.appendChild(div);
-  
-  
+  //bookContainer.appendChild(div);
 
+  
 
   //create comment container 
   const form=document.createElement('form')
@@ -78,9 +77,10 @@ function renderBook(books) {
   inputText.setAttribute("id", "comment1");
   inputButton.type="submit"
   inputButton.value="Comment"
+  inputButton.setAttribute("id", "button1");
   form.append(inputText,inputButton)
   commentbox.append(form)
-  bookContainer.append(commentbox)
+  //bookContainer.append(commentbox)
   
   
 
@@ -94,10 +94,14 @@ function renderBook(books) {
     const p=document.createElement('p')
     p.className='commentP'
     p.innerText=comment
-    form.append(p)
+    likeContainer.append(p)
   })
 
  
+  const divBookComment=document.createElement('div')
+  divBookComment.className='book-comment'
+  divBookComment.append(div,commentbox)
+  bookContainer.append(divBookComment)
 
 
   
