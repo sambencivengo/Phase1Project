@@ -65,7 +65,8 @@ function renderBook(books) {
     likeNum.innerText = newLike;
 
     likeButton.style.backroundColor = 'red';
-    likeButton.textContent = '♥';
+
+    likeButton.innerHTML = ' ❤️ ';
     likeButton.style.color = 'red';
   });
 
