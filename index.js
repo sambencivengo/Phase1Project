@@ -51,10 +51,10 @@ function renderBook(books) {
   const likeNum = document.createElement('button');
   likeContainer.className = 'like-container';
   likeNum.innerText = '0';
-  likeNum.setAttribute('id', 'likeNum');
-  likeButton.innerText = '🖤';
-  likeButton.setAttribute('id', 'likeButton');
-  likeContainer.setAttribute('id', 'likeContainer');
+  likeNum.setAttribute('class', 'likeNum');
+  likeButton.innerText = '♥';
+  likeButton.setAttribute('class', 'likeButton');
+  likeContainer.setAttribute('class', 'likeContainer');
   likeContainer.append(likeNum, likeButton);
   // console.log(likeContainer);
   commentbox.append(likeContainer);
@@ -63,6 +63,8 @@ function renderBook(books) {
     const like = parseInt(likeNum.innerText);
     const newLike = like + 1;
     likeNum.innerText = newLike;
+    likeButton.style.backroundColor = 'red';
+    likeButton.style.color = 'red';
   });
 
   // set attribute for comment container

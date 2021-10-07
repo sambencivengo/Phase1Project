@@ -84,26 +84,23 @@ body {
   margin-bottom: 10px;
 }
 
-
-#button1{
+#button1 {
   height: 42px;
   width: 35px;
   font-size: 20px;
-
 }
 
-.commet-box1{
+.commet-box1 {
   width: 245px;
   height: 185px;
   overflow-y: scroll;
 }
-.commet-box1.scroll{
-  background-color:pink;
+.commet-box1.scroll {
   border-radius: 8px;
   border-width: 2px;
-  
+  overflow-y: auto;
+  overflow: auto;
 }
-
 
 .book-comment {
   display: inline-flex;
@@ -135,25 +132,26 @@ body {
   margin-left: 5px;
 }
 
-#likeNum {
+.likeNum {
   display: inline-block;
   width: 40px;
-  height: 40px ;
+  height: 40px;
   padding: auto;
   margin: 5px;
   font-size: 19px;
   font-weight: bolder;
-  
-
+  border: none;
 }
-#likeButton {
+.likeButton {
   display: inline-block;
   margin-left: 150px;
   width: 40px;
   height: 40px;
   padding: auto;
+  border: none;
   font-size: 18px;
-  
+  color: grey;
+  background-color: rgba(255, 255, 255, 0);
 }
 p.commentP {
   font-family: 'Times New Roman', Times, serif;
