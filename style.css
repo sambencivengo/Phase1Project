@@ -147,9 +147,11 @@ body {
   height: 40px;
   padding: auto;
   margin: 5px;
-  font-size: 19px;
+  font-size: 15px;
   font-weight: bolder;
   border: none;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #f2e5d9;
 }
 .likeButton {
   display: inline-block;
@@ -159,7 +161,7 @@ body {
   height: 40px;
   padding: auto;
   border: none;
-  font-size: 18px;
+  font-size: 25 px;
   color: grey;
   background-color: rgba(255, 255, 255, 0);
 }

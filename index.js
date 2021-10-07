@@ -52,7 +52,7 @@ function renderBook(books) {
   likeContainer.className = 'like-container';
   likeNum.innerText = '0';
   likeNum.setAttribute('class', 'likeNum');
-  likeButton.innerText = '♥';
+  likeButton.innerText = '♡';
   likeButton.setAttribute('class', 'likeButton');
   likeContainer.setAttribute('class', 'likeContainer');
   likeContainer.append(likeNum, likeButton);
@@ -63,7 +63,9 @@ function renderBook(books) {
     const like = parseInt(likeNum.innerText);
     const newLike = like + 1;
     likeNum.innerText = newLike;
+
     likeButton.style.backroundColor = 'red';
+    likeButton.textContent = '♥';
     likeButton.style.color = 'red';
   });
 
