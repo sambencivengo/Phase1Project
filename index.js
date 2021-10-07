@@ -56,7 +56,7 @@ function renderBook(books) {
   likeButton.setAttribute('id', 'likeButton');
   likeContainer.setAttribute('id', 'likeContainer');
   likeContainer.append(likeNum, likeButton);
- // console.log(likeContainer);
+  // console.log(likeContainer);
   commentbox.append(likeContainer);
 
   likeButton.addEventListener('click', function () {
@@ -78,19 +78,19 @@ function renderBook(books) {
   //bookContainer.append(commentbox)
 
   //form for comments in every book
-  const commentP=document.createElement('div')
-  commentP.className="commet-box1"
+  const commentP = document.createElement('div');
+  commentP.className = 'commet-box1';
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const comment = e.target.comment1.value;
     const p = document.createElement('p');
     p.className = 'commentP';
     p.innerText = comment;
-    commentP.append(p)
-    console.log(commentP)
+    commentP.append(p);
+    console.log(commentP);
   });
-  
-  likeContainer.append(commentP); 
+
+  likeContainer.append(commentP);
 
   const divBookComment = document.createElement('div');
   divBookComment.className = 'book-comment';
