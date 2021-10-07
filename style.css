@@ -157,11 +157,11 @@ body {
   display: inline-block;
   margin-left: 150px;
   font-size: 100px;
-  width: 40px;
-  height: 40px;
+  /* width: 40px; */
+  /* height: 40px; */
   padding: auto;
   border: none;
-  font-size: 25 px;
+  font-size: 25px;
   color: grey;
   background-color: rgba(255, 255, 255, 0);
 }
