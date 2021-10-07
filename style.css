@@ -4,8 +4,8 @@
   font-size: 40px;
   font-family: 'Brush Script MT', cursive;
   max-height: 50px;
-  color: white;
-  text-shadow: 2px 2px 8px #000000;
+  color: black;
+  text-shadow: 8px 4px 8px rgba(172, 154, 104, 0.76);
 }
 #nav-bar {
   margin-top: 200px;
@@ -42,7 +42,7 @@ label {
   border: transparent;
 }
 body {
-  background-color: #f2e5d9;
+  background-color:#faf0e6;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -113,6 +113,7 @@ body {
 
 .book-comment {
   display: inline-flex;
+  box-shadow:4px 4px 2px 1px  black;
   margin: 30px;
   background-color: rgba(172, 154, 104, 0.76);
   padding-top: 15px;
@@ -181,6 +182,7 @@ p.commentP {
 
 .book-description {
   font-size: 15px;
+  font-weight: bold;
   padding: 5px;
   text-align: left;
 }
@@ -191,8 +193,8 @@ p.commentP {
 }
 
 .description-container {
-  background-color: #fff;
-  padding: 2rem;
+  background-color:#faf0e6;
+  padding: 1rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -202,6 +204,7 @@ p.commentP {
   overflow-y: auto;
   transition: transform 0.3s ease-in;
   visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .book-card:hover .description-container {
@@ -209,3 +212,4 @@ p.commentP {
 
   visibility: visible;
 }
+
