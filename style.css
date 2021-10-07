@@ -1,5 +1,14 @@
+#page-title {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: 'Brush Script MT', cursive;
+  max-height: 50px;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
 #nav-bar {
-  margin-top: 40px;
+  margin-top: 200px;
   margin-bottom: 60px;
   background-color: rgba(172, 154, 104, 0.76);
   padding: 15px;
@@ -145,6 +154,7 @@ body {
 .likeButton {
   display: inline-block;
   margin-left: 150px;
+  font-size: 100px;
   width: 40px;
   height: 40px;
   padding: auto;

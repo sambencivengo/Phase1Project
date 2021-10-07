@@ -88,6 +88,7 @@ function renderBook(books) {
     const p = document.createElement('p');
     p.className = 'commentP';
     p.innerText = comment;
+    e.target.reset();
     commentP.append(p);
     console.log(commentP);
   });
