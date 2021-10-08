@@ -10,7 +10,7 @@
 #nav-bar {
   margin-top: 200px;
   margin-bottom: 60px;
-  background-color: rgba(172, 154, 104, 0.76);
+  background-color: #e07a5f;
   padding: 15px;
   border-radius: 5px 20px 5px 20px;
   box-shadow: 2px 2px 2px 1px rgb(0, 0, 0);
@@ -42,13 +42,13 @@ label {
   border: transparent;
 }
 body {
-  background-color:#F2CC8F;
+  background-color: #f2cc8f;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .book-card {
-  background-color: #F4F1DE;
+  background-color: #f4f1de;
   padding: 5px;
   margin-top: 15px;
   float: left;
@@ -62,7 +62,7 @@ body {
 }
 
 .comment-box {
-  background-color: white;
+  background-color: #f4f1de;
   padding: 5px;
   margin-top: 15px;
   margin-left: 15px;
@@ -90,7 +90,7 @@ body {
   height: 35px;
   margin-left: 20px;
   margin-bottom: 10px;
-  border:solid rgba(172, 154, 104, 0.76)
+  border: solid rgba(172, 154, 104, 0.76);
 }
 
 #button1 {
@@ -98,14 +98,13 @@ body {
   width: 35px;
   font-size: 20px;
   background-color: rgba(172, 154, 104, 0.76);
-  border:  rgba(172, 154, 104, 0.76);
+  border: rgba(172, 154, 104, 0.76);
 }
 
 .commet-box1 {
   width: 245px;
   height: 185px;
   overflow-y: scroll;
-
 }
 .commet-box1.scroll {
   border-radius: 8px;
@@ -114,12 +113,11 @@ body {
   overflow: auto;
 }
 
-
 .book-comment {
   display: inline-flex;
-  box-shadow:4px 4px 2px 1px  black;
+  box-shadow: 4px 4px 2px 1px #81b29a;
   margin: 30px;
-  background-color: rgba(172, 154, 104, 0.76);
+  background-color: #3d405b;
   padding-top: 15px;
   padding-left: 30px;
   padding-right: 15px;
@@ -197,7 +195,7 @@ p.commentP {
 }
 
 .description-container {
-  background-color:#faf0e6;
+  background-color: #faf0e6;
   padding: 1rem;
   position: absolute;
   left: 0;
@@ -216,4 +214,3 @@ p.commentP {
 
   visibility: visible;
 }
-
