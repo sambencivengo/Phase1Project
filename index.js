@@ -35,7 +35,11 @@ function renderBook(books) {
   p.textContent = books.description;
   bookInfo.append(h1, h2);
   descriptionContainer.append(p);
-  div.append(image, bookInfo, descriptionContainer);
+  if (descriptionContainer.textContent !== '') {
+    div.append(image, bookInfo, descriptionContainer);
+  } else {
+    div.append(image, bookInfo);
+  }
   //bookContainer.appendChild(div);
 
   //create comment container
@@ -165,7 +169,6 @@ function removeAllChildNodes(parent) {
     parent.removeChild(parent.firstChild);
   }
 }
-
 
 select.addEventListener('change', () => {
   removeAllChildNodes(bookContainer);
