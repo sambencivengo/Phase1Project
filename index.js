@@ -43,7 +43,6 @@ function renderBook(books) {
   const inputText = document.createElement('input');
   const inputButton = document.createElement('input');
   const commentbox = document.createElement('div');
-  const divComment = document.getElementById('comment-container');
 
   //create like button for every container
   const likeContainer = document.createElement('div');
@@ -56,16 +55,14 @@ function renderBook(books) {
   likeButton.setAttribute('class', 'likeButton');
   likeContainer.setAttribute('class', 'likeContainer');
   likeContainer.append(likeNum, likeButton);
-  // console.log(likeContainer);
   commentbox.append(likeContainer);
 
   likeButton.addEventListener('click', function () {
     const like = parseInt(likeNum.innerText);
     const newLike = like + 1;
     likeNum.innerText = newLike;
-
     likeButton.style.backroundColor = 'red';
-    likeButton.textContent = '♥';
+    likeButton.innerHTML = ' ❤️ ';
     likeButton.style.color = 'red';
   });
 
@@ -96,7 +93,6 @@ function renderBook(books) {
   });
 
   likeContainer.append(commentP);
-
   const divBookComment = document.createElement('div');
   divBookComment.className = 'book-comment';
   divBookComment.append(div, commentbox);
@@ -105,7 +101,6 @@ function renderBook(books) {
 
 const commentContainer = document.getElementById('comment-container');
 const bookContainer = document.getElementById('book-container');
-console.log();
 
 function getBooks(genre) {
   fetch(baseURL + genre + key)
@@ -170,9 +165,7 @@ function removeAllChildNodes(parent) {
     parent.removeChild(parent.firstChild);
   }
 }
-// fetch('https://api.nytimes.com/svc/books/v3/lists/names' + key)
-//   .then((resp) => resp.json())
-//   .then((data) => console.log(data));
+
 
 select.addEventListener('change', () => {
   removeAllChildNodes(bookContainer);
