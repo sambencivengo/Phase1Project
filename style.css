@@ -91,18 +91,22 @@ body {
   height: 35px;
   margin-left: 20px;
   margin-bottom: 10px;
+  border:solid rgba(172, 154, 104, 0.76)
 }
 
 #button1 {
   height: 42px;
   width: 35px;
   font-size: 20px;
+  background-color: rgba(172, 154, 104, 0.76);
+  border:  rgba(172, 154, 104, 0.76);
 }
 
 .commet-box1 {
   width: 245px;
   height: 185px;
   overflow-y: scroll;
+
 }
 .commet-box1.scroll {
   border-radius: 8px;
@@ -110,6 +114,7 @@ body {
   overflow-y: auto;
   overflow: auto;
 }
+
 
 .book-comment {
   display: inline-flex;
