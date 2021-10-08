@@ -106,6 +106,7 @@ body {
   width: 245px;
   height: 185px;
   overflow-y: scroll;
+
 }
 .commet-box1.scroll {
   border-radius: 8px;
@@ -113,6 +114,7 @@ body {
   overflow-y: auto;
   overflow: auto;
 }
+
 
 .book-comment {
   display: inline-flex;
